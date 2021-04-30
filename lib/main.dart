@@ -109,8 +109,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
       setState(() {
         _currentAddress =
-            "${place.subLocality} ${place.locality} ${place.postalCode}"+
-                " ${place.country} ${place.isoCountryCode}";
+            "${place.subLocality},${place.locality},${place.postalCode},${place.thoroughfare}"+
+                ",${place.position},${place.administrativeArea},${place.name}"+
+                ",${place.subThoroughfare},${place.subAdministrativeArea},${place.country},${place.isoCountryCode}";
       });
     } catch (e) {
       print(e);
