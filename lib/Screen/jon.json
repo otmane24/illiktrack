@@ -1,0 +1,554 @@
+{
+  "plus_code" : {
+    "compound_code" : "RFJP+9G Rouvres, France",
+    "global_code" : "8FW3RFJP+9G"
+  },
+  "results" : [
+    {
+      "address_components" : [],
+      "formatted_address": "1 Le Pommier de Bois, 28260 Rouvres, France",
+      "geometry" : {
+        "location" : {
+          "lat" : 48.8313921,
+          "lng" : 1.4860787
+        },
+        "location_type" : "ROOFTOP",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 48.8327410802915,
+            "lng" : 1.487427680291502
+          },
+          "southwest" : {
+            "lat" : 48.8300431197085,
+            "lng" : 1.484729719708498
+          }
+        }
+      },
+      "place_id" : "ChIJ494wtmKu5kcRYy5UhBPC4Ds",
+      "plus_code" : {
+        "compound_code" : "RFJP+HC Rouvres, France",
+        "global_code" : "8FW3RFJP+HC"
+      },
+      "types" : [ "street_address" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "D21.5",
+          "short_name" : "D21.5",
+          "types" : [ "route" ]
+        },
+        {
+          "long_name" : "Rouvres",
+          "short_name" : "Rouvres",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "Eure-et-Loir",
+          "short_name" : "Eure-et-Loir",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "Centre-Val de Loire",
+          "short_name" : "Centre-Val de Loire",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "France",
+          "short_name" : "FR",
+          "types" : [ "country", "political" ]
+        },
+        {
+          "long_name" : "28260",
+          "short_name" : "28260",
+          "types" : [ "postal_code" ]
+        }
+      ],
+      "formatted_address" : "D21.5, 28260 Rouvres, France",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 48.8316558,
+            "lng" : 1.4864534
+          },
+          "southwest" : {
+            "lat" : 48.828477,
+            "lng" : 1.485954
+          }
+        },
+        "location" : {
+          "lat" : 48.8300641,
+          "lng" : 1.4862252
+        },
+        "location_type" : "GEOMETRIC_CENTER",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 48.8316558,
+            "lng" : 1.487552680291502
+          },
+          "southwest" : {
+            "lat" : 48.828477,
+            "lng" : 1.484854719708498
+          }
+        }
+      },
+      "place_id" : "ChIJC2LSAoiu5kcRWvSas88Nr3o",
+      "types" : [ "route" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "11",
+          "short_name" : "11",
+          "types" : [ "street_number" ]
+        },
+        {
+          "long_name": "The Apple Tree",
+          "short_name": "The Apple Tree",
+          "types" : [ "route" ]
+        },
+        {
+          "long_name" : "Rouvres",
+          "short_name" : "Rouvres",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "Eure-et-Loir",
+          "short_name" : "Eure-et-Loir",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "Centre-Val de Loire",
+          "short_name" : "Centre-Val de Loire",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "France",
+          "short_name" : "FR",
+          "types" : [ "country", "political" ]
+        },
+        {
+          "long_name" : "28260",
+          "short_name" : "28260",
+          "types" : [ "postal_code" ]
+        }
+      ],
+      "formatted_address": "11 Le Pommier de Bois, 28260 Rouvres, France",
+      "geometry" : {
+        "location" : {
+          "lat" : 48.8318193,
+          "lng" : 1.4860011
+        },
+        "location_type" : "RANGE_INTERPOLATED",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 48.8331682802915,
+            "lng" : 1.487350080291502
+          },
+          "southwest" : {
+            "lat" : 48.8304703197085,
+            "lng" : 1.484652119708498
+          }
+        }
+      },
+      "place_id" : "EiwxMSBMZSBQb21taWVyIGRlIEJvaXMsIDI4MjYwIFJvdXZyZXMsIEZyYW5jZSIaEhgKFAoSCUuHozJ9ruZHEWvYn5MdLONLEAs",
+      "types" : [ "street_address" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "6",
+          "short_name" : "6",
+          "types" : [ "street_number" ]
+        },
+        {
+          "long_name": "The Apple Tree",
+          "short_name": "The Apple Tree",
+          "types" : [ "route" ]
+        },
+        {
+          "long_name" : "Rouvres",
+          "short_name" : "Rouvres",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "Eure-et-Loir",
+          "short_name" : "Eure-et-Loir",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "Centre-Val de Loire",
+          "short_name" : "Centre-Val de Loire",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "France",
+          "short_name" : "FR",
+          "types" : [ "country", "political" ]
+        },
+        {
+          "long_name" : "28260",
+          "short_name" : "28260",
+          "types" : [ "postal_code" ]
+        }
+      ],
+      "formatted_address": "6 Le Pommier de Bois, 28260 Rouvres, France",
+      "geometry" : {
+        "location" : {
+          "lat" : 48.832246,
+          "lng" : 1.4842899
+        },
+        "location_type" : "ROOFTOP",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 48.83359498029149,
+            "lng" : 1.485638880291502
+          },
+          "southwest" : {
+            "lat" : 48.8308970197085,
+            "lng" : 1.482940919708498
+          }
+        }
+      },
+      "place_id" : "ChIJG-KGIn2u5kcRM-L5vo7l9Jo",
+      "plus_code" : {
+        "compound_code" : "RFJM+VP Rouvres, France",
+        "global_code" : "8FW3RFJM+VP"
+      },
+      "types" : [ "beauty_salon", "establishment", "point_of_interest" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "Rouvres",
+          "short_name" : "Rouvres",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "Eure-et-Loir",
+          "short_name" : "Eure-et-Loir",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "Centre-Val de Loire",
+          "short_name" : "Centre-Val de Loire",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "France",
+          "short_name" : "FR",
+          "types" : [ "country", "political" ]
+        },
+        {
+          "long_name" : "28260",
+          "short_name" : "28260",
+          "types" : [ "postal_code" ]
+        }
+      ],
+      "formatted_address" : "28260 Rouvres, France",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 48.856454,
+            "lng" : 1.5205099
+          },
+          "southwest" : {
+            "lat" : 48.80883799999999,
+            "lng" : 1.428301
+          }
+        },
+        "location" : {
+          "lat" : 48.840504,
+          "lng" : 1.486409
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 48.856454,
+            "lng" : 1.5205099
+          },
+          "southwest" : {
+            "lat" : 48.80883799999999,
+            "lng" : 1.428301
+          }
+        }
+      },
+      "place_id" : "ChIJSbgbfNWt5kcR4HY5BdfIDQQ",
+      "types" : [ "locality", "political" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "28260",
+          "short_name" : "28260",
+          "types" : [ "postal_code" ]
+        },
+        {
+          "long_name" : "Anet",
+          "short_name" : "Anet",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "Eure-et-Loir",
+          "short_name" : "Eure-et-Loir",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "Centre-Val de Loire",
+          "short_name" : "Centre-Val de Loire",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "France",
+          "short_name" : "FR",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "28260 Anet, France",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 48.9410782,
+            "lng" : 1.5837451
+          },
+          "southwest" : {
+            "lat" : 48.8048221,
+            "lng" : 1.3559389
+          }
+        },
+        "location" : {
+          "lat" : 48.8904119,
+          "lng" : 1.4997363
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 48.9410782,
+            "lng" : 1.5837451
+          },
+          "southwest" : {
+            "lat" : 48.8048221,
+            "lng" : 1.3559389
+          }
+        }
+      },
+      "place_id" : "ChIJpxDfIQey5kcRAA9IRdrIDRw",
+      "postcode_localities" : [
+        "Anet",
+        "Berchères-sur-Vesgre",
+        "Boncourt",
+        "Gilles",
+        "Guainville",
+        "La Chaussée-d'Ivry",
+        "Le Mesnil-Simon",
+        "Oulins",
+        "Rouvres",
+        "Saint-Ouen-Marchefroy",
+        "Saussay",
+        "Sorel-Moussel"
+      ],
+      "types" : [ "postal_code" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "Eure-et-Loir",
+          "short_name" : "Eure-et-Loir",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "Centre-Val de Loire",
+          "short_name" : "Centre-Val de Loire",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "France",
+          "short_name" : "FR",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address": "Eure-et-Loir, France",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 48.941029,
+            "lng" : 1.99456
+          },
+          "southwest" : {
+            "lat" : 47.95381800000001,
+            "lng" : 0.755676
+          }
+        },
+        "location" : {
+          "lat" : 48.5525242,
+          "lng" : 1.1989814
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 48.941029,
+            "lng" : 1.99456
+          },
+          "southwest" : {
+            "lat" : 47.95381800000001,
+            "lng" : 0.755676
+          }
+        }
+      },
+      "place_id" : "ChIJozitvHMK5EcRICczBdfIDQM",
+      "types" : [ "administrative_area_level_2", "political" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "Centre-Val de Loire",
+          "short_name" : "Centre-Val de Loire",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "France",
+          "short_name" : "FR",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address": "Center-Val de Loire, France",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 48.941029,
+            "lng" : 3.1284099
+          },
+          "southwest" : {
+            "lat" : 46.3469059,
+            "lng" : 0.0527369
+          }
+        },
+        "location" : {
+          "lat" : 47.7515686,
+          "lng" : 1.6750631
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 48.941029,
+            "lng" : 3.1284099
+          },
+          "southwest" : {
+            "lat" : 46.3469059,
+            "lng" : 0.0527369
+          }
+        }
+      },
+      "place_id" : "ChIJiV0INnu55EcRMCUzBdfIDQE",
+      "types" : [ "administrative_area_level_1", "political" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "France",
+          "short_name" : "FR",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "France",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 51.1241999,
+            "lng" : 9.6624999
+          },
+          "southwest" : {
+            "lat" : 41.31433,
+            "lng" : -5.5591
+          }
+        },
+        "location" : {
+          "lat" : 46.227638,
+          "lng" : 2.213749
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 51.1241999,
+            "lng" : 9.6624999
+          },
+          "southwest" : {
+            "lat" : 41.31433,
+            "lng" : -5.5591
+          }
+        }
+      },
+      "place_id" : "ChIJMVd4MymgVA0R99lHx5Y__Ws",
+      "types" : [ "country", "political" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "RFJP+9G",
+          "short_name" : "RFJP+9G",
+          "types" : [ "plus_code" ]
+        },
+        {
+          "long_name" : "Rouvres",
+          "short_name" : "Rouvres",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "Eure-et-Loir",
+          "short_name" : "Eure-et-Loir",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "Centre-Val de Loire",
+          "short_name" : "Centre-Val de Loire",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "France",
+          "short_name" : "FR",
+          "types" : [ "country", "political" ]
+        },
+        {
+          "long_name" : "28260",
+          "short_name" : "28260",
+          "types" : [ "postal_code" ]
+        }
+      ],
+      "formatted_address" : "RFJP+9G Rouvres, France",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 48.831,
+            "lng" : 1.486375
+          },
+          "southwest" : {
+            "lat" : 48.83087500000001,
+            "lng" : 1.48625
+          }
+        },
+        "location" : {
+          "lat" : 48.8309714,
+          "lng" : 1.4863203
+        },
+        "location_type" : "ROOFTOP",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 48.8322864802915,
+            "lng" : 1.487661480291502
+          },
+          "southwest" : {
+            "lat" : 48.8295885197085,
+            "lng" : 1.484963519708498
+          }
+        }
+      },
+      "place_id" : "GhIJpnRVRV1qSEARNBh-y_fH9z8",
+      "plus_code" : {
+        "compound_code" : "RFJP+9G Rouvres, France",
+        "global_code" : "8FW3RFJP+9G"
+      },
+      "types" : [ "plus_code" ]
+    }
+  ],
+  "status" : "OK"
+}
