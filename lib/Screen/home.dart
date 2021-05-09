@@ -100,7 +100,7 @@ class _HomeState extends State<Home> {
     checkConnection().then((value) => _getCurrentLocation());
     _connectivity.onConnectivityChanged.listen(_connectionChange);
     _getCurrentLocation();
-    _checkGps();
+
   }
 
   Future _checkGps() async {
@@ -157,6 +157,7 @@ class _HomeState extends State<Home> {
       stream: positionStreamSubcription,
       builder: (context, snapShot) {
         if (snapShot.hasData) {
+          _checkGps();
           _currentPosition = snapShot.data;
           updateLocation(snapShot.data);
         }
@@ -194,7 +195,7 @@ class _HomeState extends State<Home> {
                                     SizedBox(
                                       height: 5,
                                     ),
-                                    Text("location",
+                                    Text("Location",
                                         style: TextStyle(
                                           fontSize: 16,
                                         )),
