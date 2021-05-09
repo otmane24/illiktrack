@@ -15,6 +15,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  //--------------------------------------------------
 
   bool hasConnection = false;
   final Connectivity _connectivity = Connectivity();
@@ -35,21 +36,6 @@ class _HomeState extends State<Home> {
         print("Error: ${e.toString()}");
       }
     }
-  }
-
-  Future<Map> getLocation(Position place) async {
-    String url =
-        "https://maps.googleapis.com/maps/api/geocode/json?latlng=${place.latitude},${place.longitude}&key=AIzaSyBR046smIiQUeRbBaErZWkgtdiMFmOlAlc";
-    http.Response response = await http.get(Uri.parse(url));
-    String source = response.body;
-    return json.decode(source);
-  }
-
-  void updateLocation(Position place) async {
-    Map locationMap = await getLocation(place);
-    setState(() {
-      _currentAddress = locationMap["results"][0]["formatted_address"];
-    });
   }
 
   Future<bool> checkConnection() async {
@@ -81,12 +67,9 @@ class _HomeState extends State<Home> {
   }
 
   //--------------------------------------------------
-  //final Geolocator geoLocator =Geolocator();
   Position _currentPosition;
   String _currentAddress;
   Position position;
-
-  // Stream <Position> positionStream =
 
   @override
   void dispose() async {
@@ -97,12 +80,13 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
+    _checkGps();
     checkConnection().then((value) => _getCurrentLocation());
     _connectivity.onConnectivityChanged.listen(_connectionChange);
     _getCurrentLocation();
-
   }
 
+  //------------------------ About GPS ------------------------------
   Future _checkGps() async {
     if (!(await Geolocator.isLocationServiceEnabled())) {
       if (Theme.of(context).platform == TargetPlatform.android ||
@@ -138,23 +122,49 @@ class _HomeState extends State<Home> {
   Future<void> _getCurrentLocation() async {
     await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.best)
         .then((Position position) {
-      /* setState(() {
-        _getAddressFromLatLng(position);
+      setState(() {
+        _currentPosition = position;
+        updateLocation(position);
       });
-      */
     }).catchError((e) {
       print(e);
     });
   }
+
+  Future<Map> getLocation(Position place) async {
+    try {
+      String url =
+          "https://maps.googleapis.com/maps/api/geocode/json?latlng=${place.latitude},${place.longitude}&key=AIzaSyBR046smIiQUeRbBaErZWkgtdiMFmOlAlc";
+      http.Response response = await http.get(Uri.parse(url));
+      String source = response.body;
+      return json.decode(source);
+    } catch (e) {
+      print(e);
+    }
+    return null;
+  }
+
+  void updateLocation(Position place) async {
+    try {
+      await getLocation(place).then((locationMap) {
+        setState(() {
+          _currentAddress = locationMap["results"][0]["formatted_address"];
+        });
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
   // ignore: cancel_subscriptions
-  Stream<Position> positionStreamSubcription = Geolocator.getPositionStream();
+  Stream<Position> positionStreamSubscription = Geolocator.getPositionStream();
 
   // ignore: close_sinks
-
+//-----------------------------------------------------------------
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: positionStreamSubcription,
+      stream: positionStreamSubscription,
       builder: (context, snapShot) {
         if (snapShot.hasData) {
           _currentPosition = snapShot.data;
@@ -223,13 +233,14 @@ class _HomeState extends State<Home> {
                                       height: 10,
                                     ),
                                     Container(
-                                      child:Text(
+                                      child: Text(
                                           (snapShot.hasData
                                               ? "lat : ${_currentPosition.latitude.toString()}  lon : ${_currentPosition.longitude.toString()}"
                                               : ""),
                                           style: TextStyle(
                                             fontSize: 14,
-                                          )), )
+                                          )),
+                                    )
                                   ],
                                 ),
                               ),
@@ -239,7 +250,6 @@ class _HomeState extends State<Home> {
                               SizedBox(
                                 width: 5,
                               ),
-
                             ],
                           ),
                         ),
