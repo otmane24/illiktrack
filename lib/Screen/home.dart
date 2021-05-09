@@ -8,60 +8,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
-//import 'package:provider/provider.dart';
-
-class Image {
-  final String imageName;
-
-  Image({this.imageName});
-
-  factory Image.fromJson(Map<String, dynamic> parsedJson) {
-    return Image(imageName: parsedJson['formatted_address']);
-  }
-}
-
-class Localisation {
-  final List<Image> images;
-
-  Localisation({this.images});
-
-  factory Localisation.fromJson(Map<String, dynamic> parsedJson) {
-    var list = parsedJson['results'] as List;
-    print('list : ${list.runtimeType}');
-
-    List<Image> imagesList = list.map((i) => Image.fromJson(i)).toList();
-
-    return Localisation(images: imagesList);
-  }
-}
-
-List<Localisation> analyseCars(String responseBody) {
-  final parsedJson = json.decode(responseBody);
-  return parsedJson<Localisation>((json) => Localisation.fromJson(json))
-      .toList();
-}
-/*
-Future<List<Localisation>> fetchCars(Position place) async {
-  String url =
-      "https://maps.googleapis.com/maps/api/geocode/json?latlng=${place.latitude},${place.longitude}&key=AIzaSyBR046smIiQUeRbBaErZWkgtdiMFmOlAlc";
-  final reponse = await http.get(Uri.parse(url));
-  print("urlll : $url");
-  List<Localisation> resultat = analyseCars(reponse.body);
-  return resultat;
-}
-*/
-//------------------------------------------
-
-Future<Map> getLocation(Position place) async {
-  String url =
-      "https://maps.googleapis.com/maps/api/geocode/json?latlng=34.881789,-1.316699&key=AIzaSyBR046smIiQUeRbBaErZWkgtdiMFmOlAlc";
-  http.Response response = await http.get(Uri.parse(url));
-  print(Uri.parse(url));
-  String source = response.body;
-  return json.decode(source);
-}
-
-//------------------------------------------
 
 class Home extends StatefulWidget {
   @override
@@ -69,7 +15,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  //--------------------------------------------------
 
   bool hasConnection = false;
   final Connectivity _connectivity = Connectivity();
@@ -91,7 +36,14 @@ class _HomeState extends State<Home> {
       }
     }
   }
-  //----------------------
+
+  Future<Map> getLocation(Position place) async {
+    String url =
+        "https://maps.googleapis.com/maps/api/geocode/json?latlng=${place.latitude},${place.longitude}&key=AIzaSyBR046smIiQUeRbBaErZWkgtdiMFmOlAlc";
+    http.Response response = await http.get(Uri.parse(url));
+    String source = response.body;
+    return json.decode(source);
+  }
 
   void updateLocation(Position place) async {
     Map locationMap = await getLocation(place);
@@ -99,8 +51,6 @@ class _HomeState extends State<Home> {
       _currentAddress = locationMap["results"][0]["formatted_address"];
     });
   }
-
-  //----------------------
 
   Future<bool> checkConnection() async {
     bool previousConnection = hasConnection;
@@ -196,26 +146,6 @@ class _HomeState extends State<Home> {
       print(e);
     });
   }
-
-/*
-  _getAddressFromLatLng(Position currentPlace) async {
-    try {
-      List<Placemark> p = await placemarkFromCoordinates(
-          currentPlace.latitude, currentPlace.longitude);
-
-      Placemark place = p[0];
-
-      setState(() {
-        _currentAddress =
-            "${place.subLocality} ${place.locality} ${place.postalCode}" +
-                " ${place.country} ${place.isoCountryCode}";
-      });
-
-    } catch (e) {
-      print(e);
-    }
-  }
-*/
   // ignore: cancel_subscriptions
   Stream<Position> positionStreamSubcription = Geolocator.getPositionStream();
 
@@ -229,10 +159,6 @@ class _HomeState extends State<Home> {
         if (snapShot.hasData) {
           _currentPosition = snapShot.data;
           updateLocation(snapShot.data);
-          //_getAddressFromLatLng(snapShot.data);
-          //print(fetchCars(snapShot.data).toString());
-          //print(_currentPosition == null ? 'Unknown' : _currentPosition.latitude.toString() + ', ' + _currentPosition.longitude.toString());
-
         }
         return Scaffold(
           appBar: AppBar(
@@ -268,15 +194,12 @@ class _HomeState extends State<Home> {
                                     SizedBox(
                                       height: 5,
                                     ),
-                                    Text(
-                                        (snapShot.hasData
-                                            ? "lat : ${_currentPosition.latitude.toString()}  lon : ${_currentPosition.longitude.toString()}"
-                                            : "location"),
+                                    Text("location",
                                         style: TextStyle(
-                                          fontSize: 14,
+                                          fontSize: 16,
                                         )),
                                     SizedBox(
-                                      height: 5,
+                                      height: 10,
                                     ),
                                     Container(
                                       child: (_currentPosition != null &&
@@ -296,6 +219,17 @@ class _HomeState extends State<Home> {
                                               ),
                                             ),
                                     ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Container(
+                                      child:Text(
+                                          (snapShot.hasData
+                                              ? "lat : ${_currentPosition.latitude.toString()}  lon : ${_currentPosition.longitude.toString()}"
+                                              : ""),
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                          )), )
                                   ],
                                 ),
                               ),
@@ -305,6 +239,7 @@ class _HomeState extends State<Home> {
                               SizedBox(
                                 width: 5,
                               ),
+
                             ],
                           ),
                         ),
