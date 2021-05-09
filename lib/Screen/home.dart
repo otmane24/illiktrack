@@ -157,7 +157,6 @@ class _HomeState extends State<Home> {
       stream: positionStreamSubcription,
       builder: (context, snapShot) {
         if (snapShot.hasData) {
-          _checkGps();
           _currentPosition = snapShot.data;
           updateLocation(snapShot.data);
         }
